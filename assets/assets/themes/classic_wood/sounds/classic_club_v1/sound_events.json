@@ -652,6 +652,19 @@
    "duration_s": 0.371,
    "channels": 1
   },
+  "mj_no_match_soft": {
+   "file": "mj_no_match",
+   "ogg": "ogg/mj_no_match.ogg",
+   "m4a": "m4a/mj_no_match.m4a",
+   "category": "mahjong",
+   "game": "mahjong",
+   "volume": 0.188,
+   "loop": false,
+   "overlap": false,
+   "throttle_ms": 200,
+   "duration_s": 0.371,
+   "channels": 1
+  },
   "mj_shuffle": {
    "file": "mj_shuffle",
    "ogg": "ogg/mj_shuffle.ogg",
