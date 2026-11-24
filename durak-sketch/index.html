@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>GAME TIME · סקיצות עיצוב מחדש לדוראק</title>
+  <style>
+    :root {
+      --bg: #141a13;
+      --card: #1d261b;
+      --brass: #bc8c50;
+      --brass-hi: #e8c278;
+      --cream: #e2cba4;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 20px 16px 48px;
+      background: var(--bg);
+      color: var(--cream);
+      font-family: -apple-system, BlinkMacSystemFont, "Rubik", "Segoe UI", Arial, sans-serif;
+      line-height: 1.55;
+    }
+    .wrap { max-width: 1180px; margin: 0 auto; }
+    h1 { color: var(--brass-hi); margin: 0 0 6px; font-size: 1.65rem; }
+    .sub { opacity: 0.9; margin: 0 0 22px; font-size: 0.98rem; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 18px;
+    }
+    .card {
+      background: var(--card);
+      border: 1.5px solid var(--brass);
+      border-radius: 14px;
+      padding: 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .card.wide { grid-column: 1 / -1; }
+    .card h2 {
+      margin: 0;
+      color: var(--brass-hi);
+      font-size: 1.12rem;
+    }
+    .card p { margin: 0; font-size: 0.92rem; opacity: 0.92; }
+    .card a { display: block; }
+    .card img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      border: 1px solid rgba(188, 140, 80, 0.35);
+      display: block;
+      background: #0f140e;
+    }
+    .box {
+      margin-top: 22px;
+      background: var(--card);
+      border: 1.5px solid var(--brass);
+      border-radius: 14px;
+      padding: 16px 20px;
+    }
+    .box h2 { color: var(--brass-hi); margin: 0 0 10px; font-size: 1.15rem; }
+    table { width: 100%; border-collapse: collapse; font-size: 0.92rem; }
+    th, td {
+      text-align: right;
+      padding: 8px 10px;
+      border-bottom: 1px solid rgba(188, 140, 80, 0.25);
+    }
+    th { color: var(--brass-hi); }
+    ul { margin: 8px 0 0; padding-right: 20px; }
+    li { margin-bottom: 6px; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>GAME TIME · עיצוב מחדש לשולחן דוראק (סקיצות לאישור)</h1>
+    <p class="sub">לחץ על כל תמונה להגדלה מלאה. הסקיצות מתאימות לאורך ולרוחב, עם קלפים גדולים משמעותית, קוזיר בולט מתחת לקופה, אנימציות מדורגות, קצב AI רגוע וסאונד מלא.</p>
+
+    <div class="grid">
+      <div class="card wide">
+        <h2>1. השוואת לפני ואחרי (אורך + לרוחב + מידות)</h2>
+        <p>למעלה/שמאל: המצב הקיים היום. למטה/ימין: העיצוב המוצע — ביטול הכותרת הענקית שלוקחת גובה, מרכזיות יד השחקן למטה גם ברוחב, וקלפים גדולים משמעותית.</p>
+        <a href="03_compare_before_after.png" target="_blank"><img src="03_compare_before_after.png" alt="השוואת לפני ואחרי" /></a>
+      </div>
+
+      <div class="card">
+        <h2>2. תצוגת אורך (390×844) — 2 שחקנים</h2>
+        <p>קלפי שולחן 76pt (+41% רוחב / +98% שטח), יד שחקן 84pt (+24% רוחב / +53% שטח), קוזיר K♥ בולט 46pt מתחת לקופה עם הילה זהובה ותגית קוזיר.</p>
+        <a href="01_portrait_2p.png" target="_blank"><img src="01_portrait_2p.png" alt="סקיצת אורך 2 שחקנים" /></a>
+      </div>
+
+      <div class="card">
+        <h2>3. תצוגת רוחב (844×390) — 2 שחקנים</h2>
+        <p>השולחן תופס כ-89% רוחב ו-95% גובה. יד השחקן ממורכזת למטה (74pt) במקום הדחיסה בצד ימין, והכפתור ("קח"/"ביטו"/"פס") יושב נוח לאגודל ימין.</p>
+        <a href="02_landscape_2p.png" target="_blank"><img src="02_landscape_2p.png" alt="סקיצת רוחב 2 שחקנים" /></a>
+      </div>
+
+      <div class="card wide">
+        <h2>4. מצבי 3–4 שחקנים, קופה ריקה וביטו ריק (ללא תגית "0")</h2>
+        <p>ללא תגית "0" כשהביטו ריק, סמל קוזיר זוהר קבוע כשהקופה נגמרת, וגריד 2 שורות לזירה כשיש 4–6 התקפות.</p>
+        <a href="04_multiplayer_4p_and_empty.png" target="_blank"><img src="04_multiplayer_4p_and_empty.png" alt="מצבי 3-4 שחקנים וקופה ריקה" /></a>
+      </div>
+
+      <div class="card wide">
+        <h2>5. לוח אנימציות, קצב משחק וסאונד (8 שלבים)</h2>
+        <p>חלוקה מדורגת מהקופה, חשיפת קוזיר, הרמת קלף ביד, קשת התקפה והגנה, השהיית קריאות לפני איסוף/ביטו, והשלמה מהקופה.</p>
+        <a href="05_animations_storyboard.png" target="_blank"><img src="05_animations_storyboard.png" alt="לוח אנימציות וסאונד" /></a>
+      </div>
+    </div>
+
+    <div class="box">
+      <h2>מידות קלפים: היום מול מוצע (במידות לוגיות pt)</h2>
+      <table>
+        <thead>
+          <tr><th>רכיב</th><th>היום</th><th>מוצע באורך</th><th>מוצע ברוחב</th><th>שיפור</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>קלפי שולחן (התקפה/הגנה)</td><td>54pt</td><td>76pt (64pt ב-4+ זוגות)</td><td>68pt</td><td>+41% רוחב / +98% שטח</td></tr>
+          <tr><td>יד שחקן</td><td>68pt (דחוס בצד ברוחב)</td><td>84pt (ממורכז)</td><td>74pt (ממורכז למטה)</td><td>+24% רוחב / +53% שטח + חפיפה חכמה</td></tr>
+          <tr><td>קופה + הצצת קוזיר</td><td>42pt / הצצה 26pt</td><td>56pt / הצצה 46pt</td><td>54pt / הצצה 42pt</td><td>+77% חשיפת קוזיר + הילה + תגית</td></tr>
+          <tr><td>קלפי יריב</td><td>30pt</td><td>40pt</td><td>34pt</td><td>+33% + אווטאר ואייקון תוקף/מגן</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="box">
+      <h2>תוכנית קצב ואנימציות + סאונד (CC0)</h2>
+      <ul>
+        <li><strong>קצב AI רגוע:</strong> החלפת ההשהיה האחידה של 550ms בהשהיה טבעית של <strong>750–1,250ms</strong> + המתנה מובטחת לסיום האנימציה הקודמת + <strong>280ms הפוגת קריאות</strong> לפני ביטו/לקיחה.</li>
+        <li><strong>רצף חלוקה בתחילת משחק:</strong> 12 קלפים עפים בהדרגה (360ms × 75ms סטאגר) ורק אז ה-AI מתחיל תור (היום ה-AI תוקף באמצע החלוקה וקוטע אותה!).</li>
+        <li><strong>מערכת הסאונד הקיימת (`SoundService` + `sound_events.json` v2):</strong> שימוש חוזר ב-<code>ui_button_brass</code>, <code>ui_error</code>, <code>game_win</code>, <code>game_lose</code> + הוספת 8 צלילי קלפים ייעודיים (`durak_card_deal`, `durak_card_select`, `durak_card_play`, `durak_card_beat`, `durak_take`, `durak_bito`, `durak_trump_reveal`, `durak_turn_cue`) מחבילות <strong>Kenney Casino Audio / Boardgame Pack (CC0 1.0)</strong> ו-OpenGameArt CC0.</li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>
