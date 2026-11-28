@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>GAME TIME · סקיצות: חבילת קלפים – דוראק בממשק הניהול</title>
+  <style>
+    :root {
+      --bg: #141a13;
+      --card: #1d261b;
+      --brass: #bc8c50;
+      --brass-hi: #e8c278;
+      --cream: #e2cba4;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 20px 16px 64px;
+      background: var(--bg);
+      color: var(--cream);
+      font-family: -apple-system, BlinkMacSystemFont, "Rubik", "Segoe UI", Arial, sans-serif;
+      line-height: 1.55;
+    }
+    .wrap { max-width: 1180px; margin: 0 auto; }
+    h1 { color: var(--brass-hi); margin: 0 0 6px; font-size: 1.65rem; }
+    .sub { opacity: 0.92; margin: 0 0 22px; font-size: 0.98rem; }
+    .stamp {
+      display: inline-block;
+      border: 1px solid var(--brass);
+      color: var(--brass-hi);
+      border-radius: 8px;
+      padding: 2px 10px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 18px;
+    }
+    .card {
+      background: var(--card);
+      border: 1.5px solid var(--brass);
+      border-radius: 14px;
+      padding: 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .card.wide { grid-column: 1 / -1; }
+    .card h2 { margin: 0; color: var(--brass-hi); font-size: 1.12rem; }
+    .card p { margin: 0; font-size: 0.92rem; opacity: 0.92; }
+    .card img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      border: 1px solid rgba(188, 140, 80, 0.35);
+      display: block;
+      background: #0f140e;
+    }
+    .card a { display: block; color: inherit; }
+    .box {
+      margin-top: 22px;
+      background: var(--card);
+      border: 1.5px solid var(--brass);
+      border-radius: 14px;
+      padding: 16px 20px;
+    }
+    .box h2 { color: var(--brass-hi); margin: 0 0 10px; font-size: 1.15rem; }
+    table { width: 100%; border-collapse: collapse; font-size: 0.92rem; }
+    th, td {
+      text-align: right;
+      padding: 8px 10px;
+      border-bottom: 1px solid rgba(188, 140, 80, 0.25);
+      vertical-align: top;
+    }
+    th { color: var(--brass-hi); font-weight: 700; }
+    code {
+      font-family: ui-monospace, "Cascadia Code", Menlo, monospace;
+      font-size: 0.86em;
+      background: rgba(0,0,0,0.3);
+      padding: 1px 5px;
+      border-radius: 4px;
+      direction: ltr;
+      unicode-bidi: isolate;
+    }
+    ul { margin: 8px 0 0; padding-right: 20px; }
+    li { margin-bottom: 8px; }
+    .chg { color: var(--brass-hi); font-weight: 600; }
+    .ok { color: #9cc48a; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="stamp">סקיצה לאישור · עוד לא בקוד</div>
+    <h1>GAME TIME · חבילת קלפים – דוראק בממשק הניהול</h1>
+    <p class="sub">
+      סקיצות לאישור, לפני כתיבת קוד. הפאנל החדש יושב בעמוד «משחקים», מתחת להגדרות החוקים הקיימות של דוראק.
+      סגנונות הציור נשלחים בתוך האפליקציה; מכאן משנים תמונות, צבעים, מתגים ופרמטרים בלי עדכון בחנות.
+      לחצו על כל תמונה להגדלה.
+    </p>
+
+    <div class="grid">
+      <article class="card wide">
+        <h2>1. מסך הניהול «חבילת קלפים – דוראק»</h2>
+        <p>סגנון מובנה, גב הקלף (העלאה / צבע / דוגמה), צבעי פנים עם הסבר בעברית מה כל צבע משנה, גודל אינדקס, ובלוק קוזיר עם תצוגת טלפון חיה.</p>
+        <a href="01_admin_deck.png" target="_blank" rel="noopener"><img src="01_admin_deck.png" alt="מסך ניהול חבילת קלפים לדוראק" /></a>
+      </article>
+
+      <article class="card">
+        <h2>2. הדגשת קוזיר ביד, לאורך</h2>
+        <p>כך זה נראה במשחק: מסגרת זהב ותגית קטנה עם סמל הצורה על קלפי הקוזיר שביד, בנוסף להילה ולתגית ליד החפיסה.</p>
+        <a href="02_in_hand_trump.png" target="_blank" rel="noopener"><img src="02_in_hand_trump.png" alt="הדגשת קוזיר ביד במסך לאורך" /></a>
+      </article>
+
+      <article class="card">
+        <h2>2ב. תקריב של היד</h2>
+        <p>קלפי הלבבות (הקוזיר כאן) מסומנים; השחורות נשארות רגילות. בממשק הניהול אפשר לבחור רק מסגרת, רק תגית, או את שניהם, או לכבות.</p>
+        <a href="02b_hand_closeup.png" target="_blank" rel="noopener"><img src="02b_hand_closeup.png" alt="תקריב של הדגשת קוזיר ביד" /></a>
+      </article>
+
+      <article class="card wide">
+        <h2>3. שלושת הסגנונות המובנים</h2>
+        <p>קלאסי (ברירת מחדל), אינדקס גדול לקריאה, וארבעה צבעים (לבבות אדום, יהלומים כחול, עלים ירוק, זוגיות שחור). קלף הקוזיר בשורה מוצג כבר עם מסגרת ותגית.</p>
+        <a href="03_presets.png" target="_blank" rel="noopener"><img src="03_presets.png" alt="השוואת שלושת סגנונות החבילה המובנים" /></a>
+      </article>
+    </div>
+
+    <section class="box">
+      <h2>שדות מוצעים, ואילו שינויי סכמה דרושים</h2>
+      <p>שום דבר מזה לא נכתב עדיין לקוד. אחרי אישור הסקיצות אפשר לבנות.</p>
+      <table>
+        <thead>
+          <tr>
+            <th>שדה</th>
+            <th>מה זה עושה</th>
+            <th>איפה נשמר</th>
+            <th>מה צריך לעדכן</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>games.durak.deck.style</code><br />classic / large_index / four_color</td>
+            <td>סגנון חבילה מובנה. ברירת מחדל: קלאסי.</td>
+            <td>בתוך הגדרות דוראק בקונפיג</td>
+            <td><span class="chg">כן:</span> <code>firestore.rules</code> (פונקציית <code>durakOk</code> — היום רשימת מפתחות סגורה בלי <code>deck</code>), וחבילת <code>gametime_config</code> (מחלקת <code>DurakSettings</code> + ולידציה)</td>
+          </tr>
+          <tr>
+            <td><code>games.durak.deck.backPattern</code><br />diamond / ornament / stripe / plain</td>
+            <td>דוגמת הגב כשאין תמונה שהועלתה. ברירת מחדל: יהלום (כמו היום).</td>
+            <td>אותו מפתח <code>deck</code></td>
+            <td>אותם כללי <code>deck</code> למעלה</td>
+          </tr>
+          <tr>
+            <td><code>games.durak.deck.indexSize</code><br />s / m / l</td>
+            <td>גודל המספר והסמל בפינת הקלף. סגנון «אינדקס גדול» מגדיר l, ואפשר לשנות ידנית.</td>
+            <td>אותו מפתח <code>deck</code></td>
+            <td>אותם כללי <code>deck</code> למעלה</td>
+          </tr>
+          <tr>
+            <td><code>games.durak.deck.trumpHalo</code> (bool, ברירת מחדל true)<br />
+                <code>trumpPill</code> (bool, true)<br />
+                <code>trumpInHand</code> (bool, true)<br />
+                <code>trumpInHandStyle</code> (badge / gold_edge / both, ברירת מחדל both)</td>
+            <td>הילה בחפיסה, תגית «קוזיר», והדגשה ביד (תגית, מסגרת זהב, או שניהם).</td>
+            <td>אותו מפתח <code>deck</code></td>
+            <td>אותם כללי <code>deck</code> למעלה</td>
+          </tr>
+          <tr>
+            <td><code>theme.colors</code><br />
+                <code>palette.durakFace</code><br />
+                <code>palette.durakSuitRed</code><br />
+                <code>palette.durakSuitBlack</code><br />
+                <code>palette.durakSuitGreen</code><br />
+                <code>palette.durakSuitBlue</code><br />
+                <code>palette.durakBack</code><br />
+                <code>palette.durakTrumpHighlight</code></td>
+            <td>צבעי פנים, גב, והדגשת הקוזיר. לכל אחד תווית והסבר בעברית, כמו שאר צבעי הערכה. ירוק וכחול פעילים רק בסגנון 4 צבעים.</td>
+            <td>צבעי הערכה (אותו מנגנון קיים)</td>
+            <td><span class="chg">כן:</span> קטלוג הצבעים ב־<code>gametime_config</code> (תוויות, הסברים, קבוצת «דוראק», וערכי מקור ב־<code>default_colors</code> / theme.json). <span class="ok">כללי Firestore לא דורשים שינוי מפתח:</span> כבר מותרים עד 200 צבעים.</td>
+          </tr>
+          <tr>
+            <td><code>theme.images['durak.cardBack']</code></td>
+            <td>תמונת גב מותאמת. PNG או WebP, יחס בערך 2:3, עד 2MB (מומלץ עד 700KB). נשמרת בבלוקים לפי SHA-256, כמו שאר תמונות הערכה.</td>
+            <td>תמונות הערכה (הצינור הקיים)</td>
+            <td><span class="chg">כן:</span> הוספת משבצת ל־<code>imageSlots</code> בקטלוג. <span class="ok">כללי Firestore לא דורשים שינוי מפתח:</span> כבר מותרות עד 20 תמונות, והיום יש 6. הוולידציה של החבילה חייבת להכיר את המפתח החדש, אחרת פרסום יידחה.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="box">
+      <h2>שאלות פתוחות (מעטות)</h2>
+      <ul>
+        <li><b>גב וצבעים, או גם תמונות פנים לכל קלף?</b> ממליץ להסתפק בסגנון מובנה + גב אחד + צבעים. העלאת 36 תמונות פנים חורגת ממגבלת 20 התמונות בקונפיג, ואסור להזרים ציור או קוד חדש מרחוק.</li>
+        <li><b>מיפוי ארבעה הצבעים:</b> לבבות אדום, יהלומים כחול, עלים ירוק, זוגיות שחור — מקובל?</li>
+        <li><b>מי בוחר את החבילה?</b> בסקיצה זו זו הגדרה גלובלית מממשק הניהול, שמתפרסמת לכל השחקנים (כמו שאר הקונפיג). האם בעתיד תרצה שגם השחקן יוכל לבחור חבילה בעצמו?</li>
+      </ul>
+    </section>
+  </div>
+</body>
+</html>
