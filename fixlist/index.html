@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>GAME TIME · אפיון וסקיצות: 6 סעיפי רשימת התיקונים</title>
+<style>
+:root{--bg:#141a13;--card:#1d261b;--brass:#bc8c50;--brass-hi:#e8c278;--cream:#e2cba4;--mut:#a9b79f;--ok:#8fcf7d;--warn:#f0b46a}
+*{box-sizing:border-box}
+body{margin:0;padding:20px 16px 80px;background:var(--bg);color:var(--cream);font-family:-apple-system,BlinkMacSystemFont,"Rubik","Segoe UI",Arial,sans-serif;line-height:1.6}
+.wrap{max-width:1180px;margin:0 auto}
+h1{color:var(--brass-hi);margin:0 0 6px;font-size:1.7rem}
+h2{color:var(--brass-hi);margin:44px 0 8px;font-size:1.35rem;border-top:1px solid #3a4a36;padding-top:22px}
+h3{color:var(--cream);margin:22px 0 6px;font-size:1.08rem}
+p,li{font-size:.97rem}
+.sub{opacity:.92;margin:0 0 18px}
+.stamp{display:inline-block;border:1px solid var(--brass);color:var(--brass-hi);border-radius:8px;padding:2px 10px;font-size:.82rem;font-weight:600;margin:0 0 10px 6px}
+.stamp.g{border-color:#5d8a50;color:var(--ok)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px;margin:12px 0}
+.grid.s{grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
+.card{background:var(--card);border:1.5px solid var(--brass);border-radius:14px;padding:12px;display:flex;flex-direction:column;gap:8px}
+.card img{width:100%;height:auto;border-radius:8px;background:#0e130d;display:block}
+.card figcaption,.cap{font-size:.86rem;color:var(--mut)}
+figure{margin:0}
+.card b{color:var(--brass-hi)}
+table{width:100%;border-collapse:collapse;margin:10px 0;background:var(--card);border:1px solid #3a4a36;border-radius:10px;overflow:hidden;font-size:.9rem}
+th,td{padding:7px 10px;border-bottom:1px solid #2c3a29;text-align:start;vertical-align:top}
+th{background:#243021;color:var(--brass-hi);font-weight:600}
+.scroll{overflow-x:auto}
+code{background:#0e130d;border:1px solid #2c3a29;border-radius:5px;padding:0 5px;font-size:.84rem;direction:ltr;unicode-bidi:isolate;color:#cfe3c4}
+pre{background:#0e130d;border:1px solid #2c3a29;border-radius:10px;padding:10px 12px;direction:ltr;text-align:left;overflow-x:auto;font-size:.82rem;color:#cfe3c4}
+.note{border-inline-start:4px solid var(--brass);background:#1a2318;padding:8px 12px;border-radius:6px;margin:10px 0}
+.note.warn{border-color:var(--warn)}
+.note.ok{border-color:#5d8a50}
+.flow{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:10px 0}
+.flow span{background:var(--card);border:1px solid var(--brass);border-radius:8px;padding:4px 10px;font-size:.88rem}
+.flow i{color:var(--brass);font-style:normal}
+.gem{display:inline-block;width:11px;height:11px;transform:rotate(45deg);margin-inline-end:6px;border-radius:2px}
+.tag{display:inline-block;font-size:.78rem;border-radius:6px;padding:0 7px;border:1px solid #5d8a50;color:var(--ok);margin-inline-start:4px}
+.tag.no{border-color:#7a6a50;color:#b9a888}
+a{color:var(--brass-hi)}
+ul{padding-inline-start:22px}
+.toc a{display:inline-block;margin:2px 4px;padding:2px 10px;border:1px solid #3a4a36;border-radius:8px;text-decoration:none}
+.ltr{direction:ltr;unicode-bidi:isolate}
+</style>
+</head>
+<body><div class="wrap">
+
+<span class="stamp">אפיון + סקיצות בלבד</span><span class="stamp g">אין שינוי קוד ואין PR</span>
+<h1>GAME TIME · אפיון וסקיצות: 6 סעיפי רשימת התיקונים</h1>
+<p class="sub">הסקיצות הורכבו מהנכסים והצילומים האמיתיים של האפליקציה (לא ציורי דמיון), והמספרים (קבצי נתונים, פתירות, מדדי קריאוּת) נמדדו על המנועים האמיתיים בענף <code>main</code> (4fcf363). כלום לא נכתב לקוד האפליקציה. הצעדים הבאים אחרי אישור שלך: סעיף אחרי סעיף, כל אחד ב-PR נפרד.</p>
+<p class="toc"><a href="#sum">סיכום</a><a href="#i1">1 · כפתורים שחורים</a><a href="#i2">2 · סודוקו</a><a href="#i3">3 · מהג׳ונג</a><a href="#i4">4 · מסך הבית</a><a href="#i5">5 · לוחות שש בש</a><a href="#i6">6 · כלי שחמט</a><a href="#admin">פאנל ניהול</a><a href="#q">שאלות פתוחות</a></p>
+
+<h2 id="sum">סיכום והערכות</h2>
+<div class="scroll"><table>
+<tr><th>#</th><th>סעיף</th><th>החלטה מרכזית</th><th>שליטה מפאנל הניהול</th><th>הערכת עבודה</th></tr>
+<tr><td>1</td><td>שש בש: כפתורים חומים ← שחורים</td><td>שני וריאנטים לבחירה (A שחור עם טבעת נחושת/פליז, B שחור מבריק מלא ללא טבעת). רק שש בש, שאר המשחקים לא נוגעים.</td><td><span class="tag no">אופציונלי</span> <code>games.backgammon.controlStyle</code> (שחור/פליז) להחזרה מהירה</td><td>0.5–1 יום</td></tr>
+<tr><td>2</td><td>סודוקו: שלבים 1..∞, בלי בחירת קושי</td><td>6 רמות (מתחיל · קל · בינוני · קשה · מומחה · אלוף). שלב N קבוע לכולם: מאגר קפוא + טרנספורמציה לפי זרע. התקדמות חדשה v2.</td><td><span class="tag">כן</span> משקלי רמות, יעדי כוכבים, XP/מטבעות, רמת האתגר היומי לכל יום</td><td>6–7 ימים</td></tr>
+<tr><td>3</td><td>מהג׳ונג: שלבים 1..∞, בלי בחירת קושי</td><td>6 דרגות 60/66/72/78/84/90 אבנים, 12 פריסות פתירות מובטחות (2 לדרגה) + היפוך מראה, זרע לכל שלב. התקדמות חדשה v3.</td><td><span class="tag">כן</span> משקלי דרגות, עזרים (ערבוב/רמז) לדרגה, כיבוי פריסה בודדת, יעדי כוכבים</td><td>5–6 ימים</td></tr>
+<tr><td>4</td><td>מסך הבית: רשת 2 בשורה</td><td>5 משחקים + תא שישי = אתגר יומי (או דוראק ממורכז, שאלה פתוחה). 3 עמודות בלנדסקייפ/טאבלט. אומנות האריחים כמפתחות תמונה חדשים.</td><td><span class="tag">כבר קיים</span> סדר וכיבוי (<code>games.order/disabled</code>) + החלפת תמונת אריח (מנגנון התמונות הקיים)</td><td>1–1.5 יום</td></tr>
+<tr><td>5</td><td>שש בש: 4 ערכות צבעים חדשות</td><td>Midnight Blue · Casino Ruby · Sand &amp; Maple · Amethyst (+ הקלאסית הנוכחית). ערכה = חבילת טוקנים, לא תמונות חדשות.</td><td><span class="tag">כן</span> <code>games.backgammon.boardScheme</code> בחירה בכרטיסי רדיו, + עריכת צבע בודד בעמוד ערכת הנושא</td><td>1–1.5 יום</td></tr>
+<tr><td>6</td><td>שחמט: ערכות כלים שנבדלות</td><td>4 ערכות חדשות ברישיון נקי: Chessnut (Apache-2.0), Celtic · Spatial · Fantasy (MIT). נבדקה קריאות מספרית.</td><td><span class="tag">כן</span> <code>games.chess.pieceSet</code> (ברירת מחדל לכולם)</td><td>2.5 ימים</td></tr>
+</table></div>
+<p class="cap">סה״כ ≈ 17–20 ימי עבודה אם ברצף. סעיפים 1, 4, 5, 6 בלתי תלויים זה בזה וניתנים להרצה במקביל. 2 ו-3 חולקים תבנית (רמות/זרע/התקדמות v2) ולכן כדאי שאותו עובד יעשה את שניהם. כל סעיף נוגע ב-<code>games.*</code> של הקונפיג המשותף (חבילת gametime_config + עמוד המשחקים בפאנל), לכן כדאי לשלב אחרי ענף durak-deck כדי לא ליצור קונפליקטים באותם קבצים.</p>
+
+<!-- ============ 1 ============ -->
+<h2 id="i1">1 · שש בש: כפתורים חומים ← שחורים</h2>
+<p>היקף: <b>שש בש בלבד</b>. הכפתורים העגולים ("מטבעות") שמשתנים: שורת הפעולות בתחתית (הגדרות, קוביות, בטל, סטטיסטיקה) וכפתור החזרה למעלה. לוחיות השמות, הקוביות והלוח נשארים כמו שהם. הנכסים הקיימים <code>ui/coin_dark_*</code> ו-<code>ui/*_emboss</code> כבר מכילים מצב כהה, ולכן לא נדרש ציור חדש מאפס אלא צבע/גימור חדש.</p>
+<h3>מצב נוכחי (חום)</h3>
+<div class="grid"><figure class="card"><img loading="lazy" src="bg_buttons_current_portrait.png" alt=""><figcaption>לאורך, כפי שהוא היום</figcaption></figure><figure class="card" style="grid-column:span 2"><img loading="lazy" src="bg_buttons_current_landscape.png" alt=""><figcaption>לרוחב, כפי שהוא היום</figcaption></figure></div>
+<h3>וריאנט A · שחור עם טבעת נחושת (מומלץ)</h3>
+<p>פנים שחור־פחם, טבעת נחושת/פליז דקה ואייקון זהב. שומר על שפת העיצוב של שאר האפליקציה (מסגרות פליז, לוחיות השמות) והכפתור בולט על הלוח הירוק.</p>
+<div class="grid"><figure class="card"><img loading="lazy" src="bg_buttons_A_portrait.png" alt=""><figcaption>A · לאורך</figcaption></figure><figure class="card" style="grid-column:span 2"><img loading="lazy" src="bg_buttons_A_landscape.png" alt=""><figcaption>A · לרוחב</figcaption></figure></div>
+<h3>וריאנט B · גרפיט שחור מבריק</h3>
+<p>כפתור שחור מלא עם ברק עדין, בלי טבעת, ואייקון בהיר. נקי ומודרני יותר, אך מתנתק מהפליז של שאר המסך.</p>
+<div class="grid"><figure class="card"><img loading="lazy" src="bg_buttons_B_portrait.png" alt=""><figcaption>B · לאורך</figcaption></figure><figure class="card" style="grid-column:span 2"><img loading="lazy" src="bg_buttons_B_landscape.png" alt=""><figcaption>B · לרוחב</figcaption></figure></div>
+<div class="note"><b>מימוש:</b> הכפתורים נשארים רכיב אחד (<code>BoardCoinButton</code> וקבוצת הכפתורים); מוחלף רק הסגנון, בתוך מסך שש בש בלבד, כך ששחמט/סודוקו/מהג׳ונג/דוראק לא משתנים. רגרסיה נבדקת בצילומי מסך (לאורך/לרוחב, עברית ואנגלית). אם נבחר <code>controlStyle</code> בפאנל, ברירת המחדל = שחור.</div>
+
+<!-- ============ 2 ============ -->
+<h2 id="i2">2 · סודוקו: שלבים 1..∞ עם קושי אקראי</h2>
+<h3>עקרון</h3>
+<p>אין יותר בחירת קושי ואין 80 השלבים הקיימים. מסך אחד: <b>שלב N</b>. הרמה של כל שלב נקבעת אקראית אך <b>קבועה</b> (שלב 57 הוא אותו פאזל לכל השחקנים בכל מכשיר, ולכן אפשר להשוות כוכבים וזמנים). הוספנו שתי רמות לארבע הקיימות.</p>
+<h3>6 הרמות</h3>
+<div class="scroll"><table>
+<tr><th>רמה</th><th>רמזים (נתונים)</th><th>טכניקות נדרשות</th><th>ציון דירוג (מנוע הקיים)</th><th>יעד 3 כוכבים</th><th>מיפוי XP/מטבעות</th><th>מקור</th></tr>
+<tr><td><span class="gem" style="background:#7FB069"></span>1 מתחיל</td><td>46–50</td><td>סינגל בלבד (חשוף וטבלה)</td><td>~35 ומטה</td><td>4 דק׳</td><td>beginner</td><td><b>חדשה</b></td></tr>
+<tr><td><span class="gem" style="background:#C5D86D"></span>2 קל</td><td>36–43</td><td>סינגלים, כמעט בלי חיפוש</td><td>38–45</td><td>6 דק׳</td><td>easy</td><td>קיימת</td></tr>
+<tr><td><span class="gem" style="background:#F2C14E"></span>3 בינוני</td><td>~28</td><td>מצביע/תובע (pointing/claiming), זוגות</td><td>61–99</td><td>10 דק׳</td><td>medium</td><td>קיימת</td></tr>
+<tr><td><span class="gem" style="background:#F08A4B"></span>4 קשה</td><td>22–27</td><td>שלשות, X-wing</td><td>101–165</td><td>15 דק׳</td><td>hard</td><td>קיימת</td></tr>
+<tr><td><span class="gem" style="background:#D1495B"></span>5 מומחה</td><td>22–27</td><td>XY/XYZ-wing, רביעיות, סורדפיש</td><td>166–249</td><td>25 דק׳</td><td>hard ×1.2</td><td>קיימת (חצי תחתון)</td></tr>
+<tr><td><span class="gem" style="background:#8E5BD0"></span>6 אלוף</td><td>22–26</td><td>אותן טכניקות, אבל 2–3 צעדי מומחה ברצף</td><td>≥250</td><td>35 דק׳</td><td>hard ×1.5</td><td><b>חדשה</b> (חצי עליון)</td></tr>
+</table></div>
+<p class="cap">הנתונים נמדדו על הטבלה הקפואה הקיימת (easy 36–43 רמזים וציון 38–45; medium 28 וציון 61–99; hard 22–27 וציון 101–165; expert 22–27 וציון 166–427) ועל 1,200 זרעים של expert: ציון ≥200 ב-17.5%, ≥250 ב-4.6%, ≥300 ב-1.25%. לכן "אלוף" = ציון ≥250. ה-XP/מטבעות מתמפים ל-4 הערכים הקיימים של <code>GameDifficulty</code> (בשרת ובכללי Firestore אין שינוי), והכפל לרמות 5–6 מגיע מהקונפיג.</p>
+<p class="cap">יעדי הזמנים בטבלה הם הצעה ראשונית (אני מניח שהקיימים 6/10/15/25 דק׳); כוונון לפי נתוני משחק.</p>
+
+<h3>איך שלב N נקבע (דטרמיניסטי)</h3>
+<div class="flow"><span>N</span><i>←</i><span>זרע = hash("gt-sudoku-v2", N)</span><i>←</i><span>רמה (לפי משקלים + מעקות)</span><i>←</i><span>פאזל בסיס מהמאגר (1 מתוך 200 לרמה)</span><i>←</i><span>טרנספורמציה לפי הזרע</span><i>←</i><span>הפאזל של שלב N</span></div>
+<ul>
+<li><b>למה לא לייצר במכשיר:</b> הגנרטור כבר דטרמיניסטי לזרע נתון, אבל יש לו timeout ו-fallback (מדדנו עד ~19 שנ׳ ב"קשה" במכשיר איטי, ו-3 שנ׳ timeout) ולכן מכשיר איטי יקבל פאזל אחר מאותו שלב. מאגר קפוא לא סובל מזה.</li>
+<li><b>מאגר קפוא:</b> <code>assets/sudoku/pool_v2.json</code>, 6 רמות × 200 = 1,200 פאזלים (מחרוזת 81 תווים ל-givens; הפתרון מחושב בטעינה במילישניות). נוצר בכלי offline אחד (<code>tool/gen_sudoku_pool.dart</code>) עם המנוע והמדרג הקיימים. עלות: "מתחיל" מיידי; "אלוף" ≈ 0.4 שנ׳ לפאזל, כלומר דקות בודדות לכל הסט. גודל ≈ 100KB. בדיקת hash בטסט מונעת שינוי בטעות (המאגר append-only: הרחבה לא משנה שלבים קיימים).</li>
+<li><b>טרנספורמציית איזומורפיזם:</b> החלפת ספרות (9!), החלפת סדר בנדים/ערימות ושורות/עמודות בתוך בנד, והחלפת שורות↔עמודות. ≈10<sup>12</sup> וריאנטים לפאזל בסיס, ולכן לא רואים חזרות. נבדק בפועל: שומר על פתרון יחיד, על פתירות לוגית ועל הרמה.</li>
+<li><b>משקלי רמה (ברירת מחדל):</b> מתחיל 18 · קל 24 · בינוני 26 · קשה 18 · מומחה 10 · אלוף 4 (%). <b>מעקות:</b> שלבים 1–3 קבועים (מתחיל, מתחיל, קל) כדי ללמד; אף פעם לא שני "מומחה/אלוף" ברצף ולא שלושה "קשה ומעלה" ברצף (הגרלה חוזרת דטרמיניסטית מהזרע הבא). שאלה פתוחה: אקראי טהור או עם המעקות (מומלץ עם).</li>
+<li><b>שינוי משקלים בפאנל משפיע רק על שלבים שעוד לא פתוחים.</b> כדי שלא ישתנה שלב שכבר שיחקת, רמת שלב N נעולה לגרסת לוח זמנים <code>scheduleVersion</code> שנשמרת בשלב שנפתח.</li>
+</ul>
+
+<h3>שמירה, התקדמות והגירה</h3>
+<div class="scroll"><table>
+<tr><th>נתון</th><th>היום</th><th>אחרי השינוי</th></tr>
+<tr><td>התקדמות שלבים</td><td><code>sudoku_progress_v1</code> (80 שלבים)</td><td><code>sudoku_progress_v2</code> = <code>{v:2, scheduleVersion, levels:{N:{stars,bestMs}}}</code>. שלב N+1 נפתח כשN הושלם. v1 נשמר <b>בארכיון</b> (לא נמחק; בניות ישנות מתעלמות מv2).</td></tr>
+<tr><td>משחק שמור באמצע</td><td><code>sudoku_game_v1_&lt;id&gt;</code></td><td><code>sudoku_game_v2_&lt;N&gt;</code>. משחקים שמורים ישנים נזרקים בפעם הראשונה (הודעה חד־פעמית).</td></tr>
+<tr><td>סטטיסטיקות, XP, מטבעות, הישגים</td><td>מערכת ההתקדמות (לפי משחק, בענן/מקומי)</td><td><b>נשמרים כמו שהם</b> (לא תלויים ברשומות השלבים). הרמות 5–6 מדווחות כ-hard.</td></tr>
+<tr><td>קידומת מחיקת חשבון</td><td><code>sudoku_</code> ב-<code>LocalAccountData</code></td><td>המפתחות החדשים מתחילים באותה קידומת, ולכן נמחקים אוטומטית, בלי שינוי.</td></tr>
+<tr><td>אתגר יומי</td><td><code>sudoku_daily_v1</code>, רמה מסתובבת</td><td><b>נשאר בנפרד</b> מהשלבים, אך נשלף מאותו מאגר ב-6 הרמות לפי יום בשבוע: א׳ אלוף · ב׳ קל · ג׳ בינוני · ד׳ בינוני · ה׳ קשה · ו׳ קשה · ש׳ מומחה (ניתן לעריכה בפאנל). מפתח המשחק השמור כולל את הרמה, ולכן מתאים לשתי הרמות החדשות בלי שבירה.</td></tr>
+</table></div>
+<div class="note warn"><b>החלטת הגירה (שאלה פתוחה):</b> ברירת המחדל המומלצת: <b>התחלה מחדש משלב 1</b> עם הודעה חד־פעמית ("סודוקו התחדש: שלבים אינסופיים!"); ה-XP והסטטיסטיקות נשמרים. אלטרנטיבה: העברת מספר השלבים שהושלמו (עד 80) כשלבים 1..c עם כוכב אחד. כל עוד אין משתמשי ייצור אמיתיים בסודוקו, האפשרות הראשונה פשוטה ובטוחה יותר.</div>
+
+<h3>מסך בחירת שלב (לפני / אחרי)</h3>
+<div class="grid"><figure class="card"><img loading="lazy" src="sudoku_levels_before.png" alt=""><figcaption>לפני: בחירת קושי + 80 שלבים</figcaption></figure><figure class="card"><img loading="lazy" src="sudoku_levels_new.png" alt=""><figcaption>אחרי: כרטיס "המשך שלב N" גדול, ורשת שלבים בגלילה אינסופית (נבנית בעצלתיים סביב השלב הנוכחי), יהלום בצבע הרמה, כוכבים, והאתגר היומי בראש.</figcaption></figure></div>
+<p class="cap">שלבים שלא הושלמו ואחרי הנוכחי מוצגים נעולים; מציגים בעשרות הקרובות בלבד כדי שהרשימה האינסופית לא תהיה כבדה. אפשר לקפוץ ל"שלב N" ידנית רק לשלבים שנפתחו.</p>
+<div class="scroll"><table>
+<tr><th>מה נדרש (קוד)</th><th>הערכה</th></tr>
+<tr><td>כלי יצירת מאגר + 2 רמות חדשות במדרג/גנרטור (minClues למתחיל, סף ציון לאלוף)</td><td>1.5–2 ימים</td></tr>
+<tr><td>מנוע שלבים (זרע, רמה, מעקות, טרנספורמציה) + טסטים (דטרמיניזם, יחידות פתרון, hash)</td><td>1.5 יום</td></tr>
+<tr><td>התקדמות v2 + שמירת משחק + הגירה (+ ארכיון v1)</td><td>1 יום</td></tr>
+<tr><td>מסך שלבים חדש (עברית/אנגלית + 3 שפות נוספות), הסרת בחירת קושי, ניתוב אתגר יומי</td><td>1.5 יום</td></tr>
+<tr><td>קונפיג ופאנל (משקלים, יעדים, יומי)</td><td>0.5 יום</td></tr>
+</table></div>
+
+<!-- ============ 3 ============ -->
+<h2 id="i3">3 · מהג׳ונג: שלבים 1..∞ עם פריסה ודרגה אקראיות</h2>
+<h3>עקרון</h3>
+<p>אותו מודל כמו סודוקו: אין בחירת קושי, שלב N קבוע, רמת קושי אקראית לשלב, <b>הקלה ביותר 60 אבנים והקשה ביותר 90</b>, ופריסה אקראית לשלב. הקושי כאן נקבע בעיקר ממספר האבנים (ועוד שכבות, ועזרים מוגבלים יותר).</p>
+<div class="scroll"><table>
+<tr><th>דרגה</th><th>אבנים</th><th>פריסות (2 לדרגה)</th><th>ערבוב/רמז (הצעה)</th><th>יעד 3 כוכבים (הצעה)</th><th>משקל</th></tr>
+<tr><td>1</td><td>60</td><td>פירמידה · מתומן</td><td>3 / 5</td><td>4:00</td><td>18</td></tr>
+<tr><td>2</td><td>66</td><td>כוכב · כיפה</td><td>3 / 5</td><td>4:24</td><td>24</td></tr>
+<tr><td>3</td><td>72</td><td>טבעת · מצודה</td><td>2 / 4</td><td>4:48</td><td>26</td></tr>
+<tr><td>4</td><td>78</td><td>פרפר · שעון חול</td><td>2 / 4</td><td>5:12</td><td>18</td></tr>
+<tr><td>5</td><td>84</td><td>יהלום · מתומן גדול</td><td>1 / 3</td><td>5:36</td><td>10</td></tr>
+<tr><td>6</td><td>90</td><td>לב · אליפסה</td><td>1 / 3</td><td>6:00</td><td>4</td></tr>
+</table></div>
+<p class="cap">המשקלים והמעקות כמו בסודוקו (שלבים 1–3: דרגה 1, 1, 2; ללא שתי דרגות 5–6 ברצף). יעד 3 כוכבים = 8 שניות לזוג.</p>
+<h3>איך שלב N נקבע ומובטח פתיר</h3>
+<div class="flow"><span>N</span><i>←</i><span>זרע = hash("gt-mahjong-v3", N)</span><i>←</i><span>דרגה</span><i>←</i><span>פריסה (1 משתי) + היפוך מראה (כן/לא)</span><i>←</i><span><code>MahjongDealer</code> עם <code>MahjongRandom(seed)</code></span></div>
+<ul>
+<li><b>פתירות מובטחת בבנייה:</b> המנוע הקיים מחלק בשיטת "הסרה הפוכה": מתחיל מלוח ריק ומציב זוגות רק על אבנים שיהיו חופשיות בסדר הסרה אפשרי, כך שיש תמיד לפחות פתרון אחד. אין צורך בפותר או ב-timeout. נמדד: <b>300/300 חלוקות פתירות בכל 12 הפריסות</b>, כ-0.2 מילישניות לחלוקה.</li>
+<li><b>דטרמיניזם:</b> אותו N = אותו לוח, בכל מכשיר (אין תלות בזמן). בדיקה: hash של חלוקות לשלבים 1..500.</li>
+<li><b>סטים של אבנים:</b> קבוצות של 4; בדרגות 66/78/90 (n mod 4 = 2) מוסיפים זוג אחד נוסף, והמנוע כבר תומך בזה.</li>
+<li><b>הפריסות:</b> מוגדרות כמפות גובה (≤10×8, ספירה מדויקת בזוגות מראה) ב-<code>MahjongLayout.custom</code>. גודל מרבי 10×8 אבנים, ולכן האבן נשארת גדולה במסך לאורך. הגדלת אבן אוטומטית לפי הפריסה.</li>
+<li><b>מתחת לכובע:</b> מספר האבנים לבדו נותן קושי מתון בלבד. מדדנו משחק אקראי: אחוז ניצחון 42–79% ללא מונוטוניות (למשל טבעת-72 קלה מכולן, פרפר-78 הכי קשה). לכן הדרגות מכוילות גם עם שכבות, עם עזרים מופחתים ועם יעדי כוכבים, ובטסט CI אפשר לקבוע סף משחק-אקראי לכל פריסה.</li>
+</ul>
+<h3>טבלת האימות (נמדדה על המנוע האמיתי)</h3>
+<div class="scroll"><table>
+<tr><th>פריסה</th><th>אבנים</th><th>שכבות</th><th>פתירות</th><th>ניצחון במשחק אקראי</th><th>זוגות חופשיים בממוצע בתחילה</th></tr>
+<tr><td>פירמידה</td><td>60</td><td>3</td><td>300/300</td><td>67%</td><td>10</td></tr>
+<tr><td>מתומן</td><td>60</td><td>3</td><td>300/300</td><td>57%</td><td>16</td></tr>
+<tr><td>כוכב</td><td>66</td><td>2</td><td>300/300</td><td>66%</td><td>25</td></tr>
+<tr><td>כיפה</td><td>66</td><td>4</td><td>300/300</td><td>67%</td><td>22</td></tr>
+<tr><td>טבעת</td><td>72</td><td>2</td><td>300/300</td><td>79%</td><td>37</td></tr>
+<tr><td>מצודה</td><td>72</td><td>3</td><td>300/300</td><td>59%</td><td>21</td></tr>
+<tr><td>פרפר</td><td>78</td><td>3</td><td>300/300</td><td>42%</td><td>28</td></tr>
+<tr><td>שעון חול</td><td>78</td><td>3</td><td>300/300</td><td>69%</td><td>23</td></tr>
+<tr><td>יהלום</td><td>84</td><td>2</td><td>300/300</td><td>50%</td><td>17</td></tr>
+<tr><td>מתומן גדול</td><td>84</td><td>3</td><td>300/300</td><td>54%</td><td>15</td></tr>
+<tr><td>לב</td><td>90</td><td>2</td><td>300/300</td><td>49%</td><td>20</td></tr>
+<tr><td>אליפסה</td><td>90</td><td>2</td><td>300/300</td><td>55%</td><td>16</td></tr>
+</table></div>
+<h3>הפריסות (2 לכל דרגה)</h3>
+<div class="grid">
+<figure class="card"><img loading="lazy" src="mahjong_layouts_t1.png" alt=""><figcaption>דרגה 1 · 60 אבנים</figcaption></figure>
+<figure class="card"><img loading="lazy" src="mahjong_layouts_t2.png" alt=""><figcaption>דרגה 2 · 66 אבנים</figcaption></figure>
+<figure class="card"><img loading="lazy" src="mahjong_layouts_t3.png" alt=""><figcaption>דרגה 3 · 72 אבנים</figcaption></figure>
+<figure class="card"><img loading="lazy" src="mahjong_layouts_t4.png" alt=""><figcaption>דרגה 4 · 78 אבנים</figcaption></figure>
+<figure class="card"><img loading="lazy" src="mahjong_layouts_t5.png" alt=""><figcaption>דרגה 5 · 84 אבנים</figcaption></figure>
+<figure class="card"><img loading="lazy" src="mahjong_layouts_t6.png" alt=""><figcaption>דרגה 6 · 90 אבנים</figcaption></figure>
+</div>
+<p class="cap">האבנים הכהות יותר בציור = שכבה גבוהה. הנתונים המלאים (משבצות ביחידות חצי אבן + מפות גובה) ב-<code>mj_layouts.json</code> אצלי ויועברו לקוד כקובץ נתונים.</p>
+<h3>מסך שלבים</h3>
+<figure class="card" style="max-width:420px"><img loading="lazy" src="mahjong_levels_new.png" alt=""><figcaption>כרטיס "המשך שלב N" + רשת שלבים בגלילה, עם מיני־פריסה על כל תא ותווית דרגה (60…90).</figcaption></figure>
+<table><tr><th>שמירה והגירה</th><th></th></tr>
+<tr><td>התקדמות</td><td>מפתח חדש <code>mahjong_levels_v3</code> (<code>{v:3,levels:{N:{stars,bestMs}}}</code>). <code>mahjong_progress_v1</code> לא נוגעים בו (ארכיון, לא נמחק) כדי שגרסה ישנה לא תיפגע.</td></tr>
+<tr><td>משחק שמור</td><td>מפתח חדש לפי N; ישנים נזרקים עם הודעה חד־פעמית.</td></tr>
+<tr><td>סטטיסטיקות/XP</td><td>נשמרים. דרגות 1–6 ← beginner/easy/medium/hard/hard/hard.</td></tr>
+<tr><td>אתגר יומי</td><td>נשאר עם הפריסה "ביתן" הקיימת (98 אבנים); לא חלק מרצף השלבים.</td></tr>
+</table>
+<table><tr><th>מה נדרש (קוד)</th><th>הערכה</th></tr>
+<tr><td>12 פריסות כקובץ נתונים + טסטי גאומטריה/פתירות + התאמת גודל אבן למסך (10×8)</td><td>1.5 יום</td></tr>
+<tr><td>מנוע שלבים (זרע/דרגה/פריסה/מראה) + טסטי דטרמיניזם</td><td>1 יום</td></tr>
+<tr><td>התקדמות v3 + שמירה + הגירה</td><td>1 יום</td></tr>
+<tr><td>מסך שלבים חדש + ניתוב + הסרת בחירת קושי + 5 השפות</td><td>1.5 יום</td></tr>
+<tr><td>כיול עזרים/כוכבים, קונפיג ופאנל</td><td>1 יום</td></tr></table>
+
+<!-- ============ 4 ============ -->
+<h2 id="i4">4 · מסך הבית: בחירת משחק כרשת 2 בשורה</h2>
+<p>כל משחק = אריח גדול וקריא: אומנות המשחק (ה-hero הקיימת של כל משחק), שם בעברית מודגש (≥18sp), ושורת משנה קצרה. ברשת: (מימין לשמאל, כמו בעברית) <b>שורה 1</b> שש בש · שחמט, <b>שורה 2</b> סודוקו · מהג׳ונג, <b>שורה 3</b> דוראק + תא שישי = האתגר היומי (שאלה פתוחה: דוראק ממורכז במקום).</p>
+<div class="grid">
+<figure class="card"><img loading="lazy" src="home_before_390.png" alt=""><figcaption>לפני (390px): כרטיסים רחבים בעמודה</figcaption></figure>
+<figure class="card"><img loading="lazy" src="home_grid_390.png" alt=""><figcaption>אחרי · טלפון 390px</figcaption></figure>
+<figure class="card"><img loading="lazy" src="home_grid_320.png" alt=""><figcaption>אחרי · טלפון קטן 320px (אריחים מתכווצים, הטקסט נשאר ≥16sp ועד שורתיים)</figcaption></figure>
+</div>
+<div class="grid">
+<figure class="card"><img loading="lazy" src="home_grid_landscape.png" alt=""><figcaption>לרוחב · 3 עמודות (או 2, לבחירה)</figcaption></figure>
+<figure class="card"><img loading="lazy" src="home_grid_tablet.png" alt=""><figcaption>טאבלט לאורך · 2 עמודות גדולות / 3 ברוחב</figcaption></figure>
+</div>
+<div class="note"><b>RTL / LTR:</b> הרשת בנויה עם <code>Directionality</code> של האפליקציה ולא עם "שמאל/ימין" קבועים: בשפות RTL (עברית, ערבית) אריח 1 נמצא בצד <b>ימין</b> של שורה 1; באנגלית/רוסית/ספרדית הסדר מתהפך (אריח 1 משמאל). הסקיצות בעברית. הטקסט ממורכז בתוך האריח ולכן לא תלוי בכיוון; ריפודים עם <code>EdgeInsetsDirectional</code>. שם משחק ארוך (למשל בספרדית) מקבל שתי שורות בלי לחתוך.</div>
+<ul>
+<li><b>שמירת הקיים:</b> הסדר בסקיצה הוא סדר המשחקים לפי הבריף, והסדר בפועל נקבע על ידי <code>games.order</code> בפאנל. סדר וכיבוי משחק מהפאנל (<code>games.order / disabled</code>) פועלים על הרשת כמו היום; משחק כבוי פשוט נעלם והרשת מסתדרת מחדש (במספר אי־זוגי התא האחרון מקבל את התא היומי או מרכוז).</li>
+<li><b>תמונות האריחים:</b> מפתחות חדשים <code>home.tile.&lt;game&gt;</code> עם ברירת מחדל מהאומנות הקיימת, ניתנים להחלפה בפאנל במנגנון התמונות הקיים. תמונות <code>home.card.*</code> שכבר הוחלפו בפאנל נשארות כ-fallback.</li>
+<li><b>ללא קוד חדש בענן:</b> הכול ב-Flutter, בלי שינוי כללי Firestore.</li>
+</ul>
+<table><tr><th>מה נדרש</th><th>הערכה</th></tr><tr><td>ווידג׳ט רשת + אריח + אומנות לכל משחק + תא יומי + טסטי ווידג׳ט וצילומי מסך 5 השפות/3 גדלים + מפתחות תמונה בפאנל</td><td>1–1.5 יום</td></tr></table>
+
+<!-- ============ 5 ============ -->
+<h2 id="i5">5 · שש בש: 4 ערכות צבעים חדשות ללוח</h2>
+<p>כל ערכה מגדירה: לוח (felt), משולשים (נקודות) בשני גוונים, אבני המשחק (בהירות/כהות), מסגרת ופליז. הנכסים (עץ, צלעות, הצללות) נשארים, והצבע מגיע מתוך <code>artTint</code> (כפל ערוצים) על טוקני הערכה, ולכן אין נכסים חדשים ואין תוספת משקל לאפליקציה. הסקיצות מציגות לאורך + לרוחב לכל ערכה.</p>
+<figure class="card"><img loading="lazy" src="bg_schemes_overview.png" alt=""><figcaption>סקירה: קלאסי (נוכחי) · חצות · רובי קזינו · חול ועץ מייפל · אמטיסט</figcaption></figure>
+<div class="grid">
+<figure class="card"><img loading="lazy" src="bg_scheme_midnight.png" alt=""><figcaption><b>Midnight Blue · כחול חצות</b>: לוח כחול עמוק, נקודות תכלת/כחול, אבנים שנהב וכחול־שחור, מסגרת כהה.</figcaption></figure>
+<figure class="card"><img loading="lazy" src="bg_scheme_ruby.png" alt=""><figcaption><b>Casino Ruby · אדום קזינו</b>: לוח בורדו, נקודות זהב ושחור, אבנים שנהב ושחורות, מסגרת שחורה.</figcaption></figure>
+<figure class="card"><img loading="lazy" src="bg_scheme_sand.png" alt=""><figcaption><b>Sand &amp; Maple · חול ועץ מייפל</b>: ערכה בהירה: לוח חול, נקודות טרקוטה/שנהב, מסגרת מייפל. היחידה הבהירה.</figcaption></figure>
+<figure class="card"><img loading="lazy" src="bg_scheme_amethyst.png" alt=""><figcaption><b>Amethyst · אמטיסט</b>: לוח סגול כהה, נקודות לילך/סגול, אבנים שנהב ושחורות, מסגרת סגולה כהה.</figcaption></figure>
+<figure class="card"><img loading="lazy" src="bg_scheme_classic.png" alt=""><figcaption><b>Classic · הנוכחי</b> (להשוואה ולברירת מחדל): לוח ירוק, נקודות בז׳/חום.</figcaption></figure>
+</div>
+<h3>שילוב במערכת</h3>
+<ul>
+<li>ערכה = <code>BoardScheme</code> (id + טוקנים) בקוד, בדומה למנגנון הטוקנים של <code>classic_wood</code>. הנקודות/אבנים/הלוח מתכווצים ב-tint לפי הערכה.</li>
+<li>הפאנל: בעמוד "משחקים ← שש בש" כרטיסי רדיו עם תמונה ממוזערת (בדיוק כמו בחירת "מיקום הכפתורים" הקיימת). ערך: <code>games.backgammon.boardScheme</code> ∈ <code>classic|midnight|ruby|sand|amethyst</code>. ערך לא מוכר ← classic.</li>
+<li>בחירת שחקן בהגדרות המשחק: מחוץ להיקף כרגע (שאלה פתוחה). הממשק ערוך כך שיהיה קל להוסיף.</li>
+</ul>
+<figure class="card"><img loading="lazy" src="admin_mock_bg_scheme.png" alt=""><figcaption>סקיצה של הפאנל: בחירת ערכת צבעים ללוח</figcaption></figure>
+<div class="note warn">הערה: "חול" היא הערכה הבהירה היחידה (משטח בהיר אך אבנים שנהב ושחורות); בבדיקה בפועל על המכשיר כדאי לוודא שאבני השנהב מספיק מובחנות על הלוח. אם לא רוצים ערכה בהירה, מחליפים אותה בערכה כהה חמישית (למשל "יער" ירוק־עמוק) ללא עלות נוספת.</div>
+<table><tr><th>מה נדרש</th><th>הערכה</th></tr><tr><td>מודל ערכות + חיווט בציור הלוח + טסטים/צילומי מסך (5 ערכות × 2 כיוונים) + קונפיג ופאנל</td><td>1–1.5 יום</td></tr></table>
+
+<!-- ============ 6 ============ -->
+<h2 id="i6">6 · שחמט: ערכות כלים שאפשר להבדיל ביניהן</h2>
+<h3>למה הכלים הנוכחיים קשים להבחנה</h3>
+<ul>
+<li><b>ניגודיות נמוכה מול הלוח:</b> גוף הכלי הלבן מול משבצת בהירה 1.28:1, וקו המתאר של הכלי השחור מול משבצת כהה 1.18:1 (כמעט נבלעים).</li>
+<li><b>צללית דומה:</b> חפיפת צללית מלך–מלכה 0.85 (1.0 = זהה). כלומר המלך והמלכה כמעט אותה צורה, רק הכתר שונה, ובגודל 43pt זה כמעט בלתי נראה. ממוצע חפיפה בין כל זוגות הכלים 0.725.</li>
+<li><b>טון על טון:</b> החומר החום-בז׳ של הכלים זהה בגוון לחומר הלוח.</li>
+</ul>
+<div class="scroll"><table>
+<tr><th>ערכה</th><th>חפיפת צללית מלך–מלכה</th><th>ממוצע חפיפה בין זוגות (נמוך = ברור)</th></tr>
+<tr><td>נוכחי (עץ)</td><td>0.851</td><td>0.725</td></tr>
+<tr><td>Chessnut</td><td>0.730</td><td>0.614</td></tr>
+<tr><td>Celtic</td><td>0.713</td><td>0.594</td></tr>
+<tr><td>Fantasy</td><td>0.736</td><td>0.565</td></tr>
+<tr><td>Spatial</td><td><b>0.682</b></td><td><b>0.489</b></td></tr>
+</table></div>
+<figure class="card"><img loading="lazy" src="chess_legibility.png" alt=""><figcaption>קריאות בגודל אמיתי (43pt) של כל הערכות על לוח האפליקציה.</figcaption></figure>
+<h3>הערכות המוצעות ורישיונות</h3>
+<div class="scroll"><table>
+<tr><th>ערכה</th><th>אופי</th><th>רישיון (נבדק מול lila/COPYING.md ומאגר המקור)</th><th>חובה</th></tr>
+<tr><td>Chessnut</td><td>קלאסית נקייה, קווים עבים</td><td><b>Apache-2.0</b></td><td>הודעת זכויות + נוסח רישיון במסך קרדיטים</td></tr>
+<tr><td>Celtic</td><td>סטאונטון רך, צורות עגולות</td><td><b>MIT</b></td><td>הודעת זכויות במסך קרדיטים</td></tr>
+<tr><td>Spatial</td><td>מודרנית־גאומטרית, הכי נבדלת</td><td><b>MIT</b></td><td>כנ״ל</td></tr>
+<tr><td>Fantasy</td><td>מעוטרת, כל כלי עם אופי</td><td><b>MIT</b></td><td>כנ״ל</td></tr>
+</table></div>
+<p class="cap"><b>נפסלו:</b> cburnett ו-merida (GPL), כל הערכות CC BY-NC-SA (אסור במסחרי), Firi/kiwen (CC BY 4.0; כשרות אבל סימני יד מוזרים), RhosGFX (CC0 אך חפיפת הצללית בין הכלים גרועה אפילו מהנוכחית), ערכת governor (רישיון לא ברור). אם תרצו תוספת: Firi/kiwen דורשות קרדיט.</p>
+<h3>הלוח עם כל ערכה</h3>
+<div class="grid">
+<figure class="card"><img loading="lazy" src="chess_set_current.png" alt=""><figcaption>נוכחי</figcaption></figure>
+<figure class="card"><img loading="lazy" src="chess_set_chessnut.png" alt=""><figcaption>Chessnut</figcaption></figure>
+<figure class="card"><img loading="lazy" src="chess_set_celtic.png" alt=""><figcaption>Celtic</figcaption></figure>
+<figure class="card"><img loading="lazy" src="chess_set_spatial.png" alt=""><figcaption>Spatial</figcaption></figure>
+<figure class="card"><img loading="lazy" src="chess_set_fantasy.png" alt=""><figcaption>Fantasy</figcaption></figure>
+</div>
+<figure class="card"><img loading="lazy" src="admin_mock_chess_sets.png" alt=""><figcaption>סקיצה של הפאנל: בחירת ערכת כלים (<code>games.chess.pieceSet</code>)</figcaption></figure>
+<ul>
+<li><b>צנרת נכסים:</b> SVG ← PNG (2×/3×) לכל ערכה: 12 כלים + כל וריאנט נלווה (מלך נטוי בשח-מט, מיניאטורות לכידה) לפי הקיים בערכה הנוכחית. כל המפתחות ב-theme pack הקיים (<code>themeImage</code>) ולכן גם הפאנל יכול להחליף כלי בודד.</li>
+<li><b>משקל:</b> הערכות ארוזות באפליקציה (ללא הורדה מהרשת); תקציב גודל יוצג בתיאור ה-PR.</li>
+<li><b>הילה בהירה</b> סביב כלים כהים על משבצת כהה (נגישות): מתג בפאנל, ברירת מחדל כבוי (שאלה פתוחה).</li>
+<li>שאלה: איזו ערכה היא ברירת המחדל? ההמלצה שלי: <b>Spatial</b> (ההבחנה הטובה ביותר) או Chessnut (הכי מוכרת).</li>
+</ul>
+<table><tr><th>מה נדרש</th><th>הערכה</th></tr><tr><td>המרת SVG, מיפוי מפתחות, בורר ערכה + קונפיג + פאנל, מסך קרדיטים, טסטי נכסים וצילומי מסך</td><td>2.5 ימים</td></tr></table>
+
+<!-- ============ ADMIN ============ -->
+<h2 id="admin">מה ניתן לשלוט בו מפאנל הניהול</h2>
+<p>הפאנל הקיים כבר שולט ב-<code>games.order</code>, <code>games.disabled</code>, <code>games.backgammon.bearOffPosition</code>, <code>games.durak.*</code>. הדפוס: ערך ברירת מחדל לכולם דרך הקונפיג המפורסם, ללא שחרור גרסה. כל הוספה כאן = שדה ב-<code>gametime_config</code> + אימות צורה (ערך לא מוכר ← ברירת מחדל) + כרטיס בעמוד "משחקים".</p>
+<div class="scroll"><table>
+<tr><th>סעיף</th><th>שדה מוצע</th><th>ערכים</th></tr>
+<tr><td>1</td><td><code>games.backgammon.controlStyle</code></td><td>black (ברירת מחדל) | brass</td></tr>
+<tr><td>2</td><td><code>games.sudoku.tierWeights</code>, <code>starTargetsMin</code>, <code>xpMultiplier</code>, <code>dailyTierByWeekday</code></td><td>משקלים, דקות, מכפילים, 7 רמות</td></tr>
+<tr><td>3</td><td><code>games.mahjong.tierWeights</code>, <code>aidsByTier</code>, <code>disabledLayouts</code>, <code>starTargetsSec</code></td><td>משקלים, ערבוב/רמז, מזהי פריסות</td></tr>
+<tr><td>4</td><td><code>games.order/disabled</code> (קיים), תמונות <code>home.tile.*</code>, <code>app.homeGrid.dailyTile</code></td><td>סדר, כיבוי, תמונה, תא יומי כן/לא</td></tr>
+<tr><td>5</td><td><code>games.backgammon.boardScheme</code></td><td>classic|midnight|ruby|sand|amethyst</td></tr>
+<tr><td>6</td><td><code>games.chess.pieceSet</code>, <code>games.chess.darkPieceHalo</code></td><td>current|chessnut|celtic|spatial|fantasy, כן/לא</td></tr>
+</table></div>
+<figure class="card"><img loading="lazy" src="admin_mock_levels.png" alt=""><figcaption>סקיצה של הפאנל: רמות סודוקו (משקלים, יעד כוכבים, XP, אתגר יומי). אותו מבנה למהג׳ונג.</figcaption></figure>
+<p class="cap">שינוי משקלים בפאנל משפיע על שלבים שטרם נפתחו בלבד (גרסת לוח זמנים). שינוי בפאנל לא יכול לשבור שלב שכבר שוחק.</p>
+
+<!-- ============ Q ============ -->
+<h2 id="q">שאלות פתוחות לאישור</h2>
+<ol>
+<li><b>כפתורי שש בש:</b> A (שחור עם טבעת נחושת) או B (גרפיט שחור מבריק בלי טבעת)? וגם לוחיות השמות (עדיין פליז) נשארות כמו שהן?</li>
+<li><b>סודוקו, התקדמות קיימת:</b> התחלה מחדש משלב 1 (מומלץ; XP וסטטיסטיקות נשמרים) או העברת השלבים שהושלמו?</li>
+<li><b>קושי אקראי:</b> אקראי טהור או עם מעקות (שלבים 1–3 קלים, בלי רצפים קשים)? מומלץ עם מעקות, ומשקלים 18/24/26/18/10/4.</li>
+<li><b>מהג׳ונג:</b> 6 דרגות (60/66/72/78/84/90) או רק 4 עוגנים (60/72/84/90)? ואם אפשר, האם אתגר יומי נשאר בפריסת הביתן?</li>
+<li><b>מסך בית:</b> התא השישי הוא אתגר יומי או שדוראק ממורכז? ובלנדסקייפ/טאבלט 3 עמודות (מומלץ) או 2?</li>
+<li><b>ערכות לוח/כלים:</b> ברירת מחדל מהפאנל בלבד, או גם בחירה של השחקן בהגדרות? האם להשאיר את "חול" הבהירה? איזו ערכת שחמט כברירת מחדל, והאם להוסיף הילה לכלים כהים?</li>
+<li><b>הסרה:</b> למחוק לגמרי את טבלאות 80 השלבים הישנות של סודוקו/מהג׳ונג מהקוד, או להשאיר בארכיון?</li>
+</ol>
+<p class="cap">קרדיטים (מסך חדש): נדרש רק להודעות Apache/MIT של 4 הערכות; הוספת ערכת CC BY תחייב גם שורת קרדיט לכל מחבר.</p>
+<p class="cap">חומר הגלם והסקריפטים נמצאים בתיקיית העבודה של הבוט (לא ב-repo). מסמך זה נוצר ב-28.11.2026 (שעון ניו יורק).</p>
+</div></body></html>
