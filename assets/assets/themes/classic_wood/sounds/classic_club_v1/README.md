@@ -89,3 +89,15 @@ Volume = suggested player volume (0-1) on top of the master SFX/music sliders. O
 - Loops: OGG is sample-exact (64.000 s / 72.000 s). AAC has encoder priming/padding (~5 ms) that some players don't trim. On iOS use AVAudioPlayer `numberOfLoops = -1` with the M4A, or the OGG via a Vorbis-capable plugin if a click is audible.
 - `ui_timer_low_tick`: play once per second for the last 10 s; it is not a loop.
 - Random pitch ±3 % on `bg_checker_place`, `bg_checker_pickup`, `ch_move`, `ch_piece_pickup`, `mj_tile_select`, `sd_digit_tap`, `sd_note_mark` avoids machine-gun repetition.
+
+## Durak (added 24.11.2026, Kenney CC0 - see `LICENSES.md`)
+| File | Category | Game | Trigger | Duration | Volume | Overlap | Throttle |
+|---|---|---|---|---|---|---|---|
+| `durak_card_deal` | durak | durak | each card dealt / drawn from the talon | 0.40 s | 0.75 | yes | 45 ms |
+| `durak_card_select` | durak | durak | a hand card lifts (selected) | 0.20 s | 0.55 | no | 40 ms |
+| `durak_card_play` | durak | durak | attack / throw-in / transfer card lands | 0.45 s | 0.85 | yes | 50 ms |
+| `durak_card_beat` | durak | durak | defence card lands on an attack | 0.40 s | 0.85 | yes | 50 ms |
+| `durak_take` | durak | durak | defender gathers the table | 0.60 s | 0.85 | no | 250 ms |
+| `durak_bito` | durak | durak | beaten cards swept to the discard | 0.65 s | 0.80 | no | 250 ms |
+| `durak_trump_reveal` | durak | durak | trump card turns face up at the deal | 0.65 s | 0.85 | no | 500 ms |
+| `durak_turn_cue` | durak | durak | the player's turn starts after the computer | 0.45 s | 0.50 | no | 400 ms |
